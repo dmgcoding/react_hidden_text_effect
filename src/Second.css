@@ -1,0 +1,91 @@
+/* :root {
+  --cursor-x: 0px;
+  --cursor-y: 0px;
+  --cursor-size: 45px;
+} */
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(15, 14, 16);
+}
+
+.text__container {
+  width: 380px;
+  padding: 20px;
+  font-size: 90px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  line-height: 67px;
+  perspective: 300px;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .cursor {
+    height: 35px;
+    width: 35px;
+    background-color: rgb(235, 89, 57);
+    border-radius: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  } */
+
+.main_page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  color: rgb(15, 14, 16);
+}
+
+.layer {
+  position: absolute;
+  offset: none;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(15, 14, 16);
+}
+
+.layer-dark {
+  z-index: 5;
+  background-color: rgb(15, 14, 16);
+}
+
+.layer-red {
+  z-index: 10;
+  top: 0;
+  background-color: rgb(235, 89, 57);
+  mask: url(assets/test-mask.svg);
+  -webkit-mask: url(assets/test-mask.svg);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-origin: content-box;
+  mask-origin: content-box;
+  mask-position: calc(var(--cursor-x) - var(--cursor-size/2))
+    calc(var(--cursor-y) - var(--cursor-size/2));
+  -webkit-mask-position: calc(var(--cursor-x) - var(--cursor-size) / 2)
+    calc(var(--cursor-y) - var(--cursor-size) / 2);
+  mask-size: var(--cursor-size);
+  -webkit-mask-size: var(--cursor-size);
+  transition-duration: 200ms;
+}
+
+.text-dark {
+  color: rgb(0, 0, 0) !important;
+}

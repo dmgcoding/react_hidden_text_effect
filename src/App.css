@@ -1,0 +1,62 @@
+:root {
+  --cursor-size: 32px;
+  --cursor-x: 0px;
+  --cursor-y: 0px;
+}
+
+.main_page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.layer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(15, 14, 16);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark_layer {
+  background-color: rgb(15, 14, 16);
+}
+
+.text_container {
+  width: 380px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 90px;
+  font-weight: 600;
+  line-height: 70px;
+  cursor: default;
+  user-select: none;
+}
+
+.layer_red {
+  background-color: rgb(235, 89, 57);
+  mask: url(assets/test-mask.svg);
+  -webkit-mask: url(assets/test-mask.svg);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: calc(var(--cursor-x) - var(--cursor-size) / 2)
+    calc(var(--cursor-y) - var(--cursor-size) / 2);
+  -webkit-mask-position: calc(var(--cursor-x) - var(--cursor-size) / 2)
+    calc(var(--cursor-y) - var(--cursor-size) / 2);
+  mask-size: var(--cursor-size);
+  -webkit-mask-size: var(--cursor-size);
+  pointer-events: none;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+.text_black {
+  color: black !important;
+}
