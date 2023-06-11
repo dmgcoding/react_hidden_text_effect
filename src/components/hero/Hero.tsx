@@ -5,6 +5,8 @@ import { ScrollTrigger } from "gsap/all";
 
 interface Props {}
 
+gsap.registerPlugin(ScrollTrigger);
+
 function Hero(props: Props) {
   const {} = props;
 
@@ -78,17 +80,30 @@ function Hero(props: Props) {
     });
   }
 
-  gsap.registerPlugin(ScrollTrigger);
-
-  let st = ScrollTrigger.create({
-    trigger: ".space2",
-    scroller: ".space2", // if no scroller is defined, the viewport (window) is used.
-    start: "top center",
-    end: "+=500",
-  });
+  // let st = ScrollTrigger.create({
+  //   trigger: ".space2",
+  //   scroller: ".space2", // if no scroller is defined, the viewport (window) is used.
+  //   start: "top center",
+  //   end: "+=500",
+  // });
 
   // get
-  let scrlPos = st.scroll();
+  // let scrlPos = st.scroll();
+
+  gsap.utils.toArray(".about_me_container > div").forEach((target: any) => {
+    gsap.to(target, {
+      backgroundPositionX: 0,
+      ease: "power1.out",
+      duration: 0.1,
+      scrollTrigger: {
+        trigger: target,
+        scrub: 1,
+        markers: false,
+        start: "-200vh center",
+        end: "-200vh center",
+      },
+    });
+  });
 
   return (
     <>
@@ -159,17 +174,18 @@ function Hero(props: Props) {
               <div>CODE?</div>
             </div>
           </div>
-
           <div className="space2"></div>
+
           <div className="space">
-            <button
-              onClick={() => {
-                console.log("scrlPos");
-              }}
-            >
-              click
-            </button>
+            <div className="about_me_container">
+              <div>I’m a selectively skilled product </div>
+              <div>designer with strong focus on</div>
+              <div>producing high quality & </div>
+              <div>impactful digital experience.</div>
+            </div>
           </div>
+          <div className="space2"></div>
+          <div className="space2"></div>
         </div>
         <div className="layer layer_red">
           <div className="header">

@@ -151,3 +151,93 @@
 .space2 {
   height: 50vh;
 }
+
+.about_me_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_me_container > div {
+  display: block;
+  position: relative;
+  width: 80vw;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-size: 4.5vw;
+  line-height: 5vw;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(
+    to right,
+    rgb(211, 198, 161) 50%,
+    rgb(95, 90, 90) 50%
+  );
+  -webkit-background: linear-gradient(
+    to right,
+    rgb(211, 198, 161) 50%,
+    rgb(95, 90, 90) 50%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200% 100%;
+  background-position-x: 100%;
+  color: transparent;
+  cursor: default;
+  user-select: none;
+  /* transition: background-position-x 500ms ease-in; */
+}
+
+/* .about_me_container:hover > div {
+  background-position-x: 0%;
+} */
+
+/* .about_me::before {
+  position: absolute;
+  offset: 0;
+  content: "I’m a selectively skilled product designer with strong focus on producing high quality & impactful digital experience.";
+  width: 70vw;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-size: 70px;
+  line-height: 80px;
+  font-weight: 600;
+  color: rgb(141, 137, 125);
+  z-index: -1;
+} */
+
+/* .about_me::before {
+  content: "I’m a selectively skilled product designer with strong focus on producing high quality & impactful digital experience.";
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(218, 211, 185);
+  font-size: 70px;
+  line-height: 80px;
+  font-weight: 600;
+  z-index: 7;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(rgb(218, 211, 185), rgb(218, 211, 185));
+  mask-image: linear-gradient(rgb(218, 211, 185), rgb(218, 211, 185));
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: 50% 100%;
+  -webkit-mask-size: 50% 100%;
+  transition: all 2s ease-in;
+}
+
+.about_me:hover {
+  background-image: linear-gradient(rgb(31, 28, 19), rgb(31, 28, 19));
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+} */
+
+/* .about_me::before span {
+  
+} */
